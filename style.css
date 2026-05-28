@@ -1,0 +1,41 @@
+body {
+            background-image: url(https://i.pinimg.com/236x/45/34/6a/45346aa1c0b6e755dc6cabd719449c68.jpg);
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+        }
+a {
+    color: rgb(255, 205, 248);
+}
+h2 {
+    color: rgb(255, 205, 248);
+    text-align: center;
+
+}
+h1 {
+    color: rgb(209, 87, 231);
+    text-align: center;
+}
+.social {
+    display: inline-block; 
+    margin: 5px; 
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    height: 250px;
+    width: 25%;
+}
+footer {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.container {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px; 
+  width: 900px; 
+  height: 420px;
+  display: block;
+}
