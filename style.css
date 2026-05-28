@@ -7,19 +7,19 @@ a {
     color: rgb(255, 205, 248);
 }
 h2 {
-    color: rgb(255, 205, 248);
+    color: rgb(223, 144, 241);
     text-align: center;
 
 }
 h1 {
-    color: rgb(209, 87, 231);
+    color: rgb(255, 205, 248);
     text-align: center;
+    border-style: dotted; position: static center
 }
 .social {
     display: inline-block; 
     margin: 5px; 
     padding: 5px;
-    text-align: center;
     font-size: 15px;
     height: 250px;
     width: 25%;
@@ -31,11 +31,12 @@ footer {
     margin-top: 20px;
 }
 .container {
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: grid; 
+  position: static center;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px; 
   width: 900px; 
-  height: 420px;
+  height: 900px;
   display: block;
 }
