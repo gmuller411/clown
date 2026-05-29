@@ -108,3 +108,7 @@ p {
    0% { top: 100%; }
     100% { top: -100%; }
   }
+  h3 {
+    color: rgb(255, 205, 248);
+    text-align: center;
+  }
