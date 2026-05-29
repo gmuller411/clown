@@ -88,3 +88,23 @@ p {
     bottom: 20px;
     right: 20px;
 }
+.scroll-container {
+    margin: 0 auto;
+    padding: 10px;
+    height: 100px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    border-style: dotted;
+    border-color: rgb(255, 205, 248);
+  }
+  .scroll-content {
+    position: absolute;
+    margin: 5px;
+    width: 100%;
+    animation: auto-scroll 10s linear infinite;
+  }
+  @keyframes auto-scroll {
+   0% { top: 100%; }
+    100% { top: -100%; }
+  }
