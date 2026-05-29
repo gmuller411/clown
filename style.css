@@ -50,6 +50,8 @@ footer {
     margin-top: 20px;
 }
 .navbar {
+    position: static center;
+    border-style: dotted; border-color: rgb(255, 205, 248); border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
