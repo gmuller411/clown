@@ -39,7 +39,7 @@ h1 {
     padding: 12px;
     font-size: 15px;
     width: 260px;
-    border: 2px solid rgb(255, 205, 248);
+    border: 2px dotted rgb(255, 205, 248);
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.3);
 }
