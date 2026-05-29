@@ -57,6 +57,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: min(100%, 980px);
+    
 }
 .navbar a {
     display: flex;
@@ -68,4 +69,14 @@ footer {
     font-size: 15px;
     width: 120px;
     background: rgba(0, 0, 0, 0.3);
+}
+.parent {
+    display:center;
+    position: flex; 
+    justify-content: center; 
+    align-items:center; 
+    width: min-content;
+    margin: auto; 
+    height: min-content;
+
 }
