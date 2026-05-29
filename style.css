@@ -7,7 +7,7 @@ a {
     color: rgb(255, 205, 248);
 }
 h2 {
-    color: rgb(223, 144, 241);
+    color: rgb(255, 205, 248);
     text-align: center;
 
 }
@@ -79,4 +79,7 @@ footer {
     margin: auto; 
     height: min-content;
 
+}
+p {
+    color: rgb(255, 205, 248);
 }
