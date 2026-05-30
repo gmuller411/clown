@@ -112,3 +112,21 @@ p {
     color: rgb(255, 205, 248);
     text-align: center;
   }
+.credit-section {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  padding: 0 12px;
+}
+.credit-section h2 {
+  margin-bottom: 12px;
+}
+.credit-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  text-align: center;
+}
+.credit-list li {
+  margin: 0.5rem 0;
+}
