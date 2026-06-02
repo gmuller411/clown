@@ -112,8 +112,8 @@ p {
 }
 
 .marquee-content img {
-    height: 50px !important;
-    width: 50px !important;
+    height: 150px !important;
+    width: 150px !important;
     object-fit: contain !important;
     flex-shrink: 0 !important;
 }
