@@ -100,16 +100,13 @@ p {
 
 .marquee-content {
     display: flex;
-    gap: 10px; 
-    animation: scroll 12s linear infinite;
-    width: fit-content;
-    background: none;
+    gap: 10px;
+    animation: scroll 8s linear infinite;
 }
 
 .marquee-img {
-    width: 100px;
+    width: auto;
     height: 200px;
-    object-fit: cover;
     flex-shrink: 0;
 }
 
@@ -118,14 +115,13 @@ p {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-1600px - 70px));
     }
 }
 
 .marquee-container:hover .marquee-content {
     animation-play-state: paused;
 }
-
   h3 {
     color: rgb(255, 205, 248);
     text-align: center;
