@@ -101,22 +101,31 @@ p {
 .marquee-content {
     display: flex;
     gap: 10px; 
-    animation: scroll 20s linear infinite;
+    animation: scroll 40s linear infinite;
     width: fit-content;
-    background:none;
+    background: none;
+}
+
+.marquee-img {
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(0%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 40px));
     }
-} 
+}
+
 .marquee-container:hover .marquee-content {
     animation-play-state: paused;
 }
+
   h3 {
     color: rgb(255, 205, 248);
     text-align: center;
