@@ -51,7 +51,15 @@
 
     </main>
     <div class="scroll-container">
-  <div class="scroll-content">
+  <div class="scroll-content" id="marquee">
+    <img src="https://64.media.tumblr.com/2323c89d33e0bad0698a22ad457f562a/a77aa48f2532ea45-74/s100x200/57e52e20f93abebd7e5463130b0af431acae2679.gif" alt="an apple stamp">
+    <img src="https://64.media.tumblr.com/75c5785ae5d74e930b25ad99c4ebfcf8/cec6d69d63283b04-62/s100x200/43cca883ab74b216096916817d45e16d916f37b3.gif">
+    <img src="https://64.media.tumblr.com/cf0d4c3ab59e13f62799284ec62c9201/625c3b209e9efdc7-cb/s250x400/3ce68474fa2dfc3dd39679233e7efaf9cc5a08a7.pnj">
+    <img src="https://64.media.tumblr.com/3edff64838c6754b3ad22e6b425490a2/e603f1d75315afb9-93/s100x200/00562c87e5c2042c755d1f6e83c8b436b536eecc.gif">
+    <img src="https://64.media.tumblr.com/e15091cd0f4cdf5282ce3bb8fc2001d6/54aaaf5af9b91161-be/s100x200/be604cf26d0ba52c38e51198bb844e0f83aa9367.pnj">
+    <img src="https://64.media.tumblr.com/a69626dea9d88e8f067577d7f5335d13/a152437fa155109c-5d/s100x200/47d8554dfba6f21f8ab9da8673754a62d3fdd27a.pnj">
+    <img src="https://64.media.tumblr.com/3e6d3918c6062a3481d4e6a9f5bba3a1/12a86d8b7bc09094-61/s100x200/2a08ff495ebc89092c9200a689d217fd9abd546a.pnj">
+    <img src="https://64.media.tumblr.com/a6796d47494b71ee5cb31bc0ddfe74d4/c8544a04f9c41d13-5a/s100x200/ff9341c423b302a6b8994a89e7b7823346c33f2d.pnj">
     <img src="https://64.media.tumblr.com/2323c89d33e0bad0698a22ad457f562a/a77aa48f2532ea45-74/s100x200/57e52e20f93abebd7e5463130b0af431acae2679.gif" alt="an apple stamp">
     <img src="https://64.media.tumblr.com/75c5785ae5d74e930b25ad99c4ebfcf8/cec6d69d63283b04-62/s100x200/43cca883ab74b216096916817d45e16d916f37b3.gif">
     <img src="https://64.media.tumblr.com/cf0d4c3ab59e13f62799284ec62c9201/625c3b209e9efdc7-cb/s250x400/3ce68474fa2dfc3dd39679233e7efaf9cc5a08a7.pnj">
@@ -82,7 +90,25 @@
     </div>
     <img src="media/inside/wigglebug.gif" alt="a dancing bug" width="200" height="200" style=" float: absolute left; margin-left: 20px;">
     </div>
-    
+    <script>
+      const marquee = document.getElementById('marquee');
+      let offset = 0;
+      const step = 2;
+      
+      function scroll() {
+        offset -= step;
+        const maxOffset = -(marquee.scrollWidth / 2);
+        
+        if (offset <= maxOffset) {
+          offset = 0;
+        }
+        
+        marquee.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(scroll);
+      }
+      
+      scroll();
+    </script>
 </body>
 <div class="pagedoll">
     <a href="https://toyhou.se/27658154.caverna">
