@@ -97,17 +97,24 @@ p {
     position: relative;
     border-style: dotted;
     border-color: rgb(255, 205, 248);
-  }
-  .scroll-content {
+}
+
+.scroll-content {
     position: absolute;
     margin: 5px;
     width: 100%;
     animation: auto-scroll 10s linear infinite;
-  }
-  @keyframes auto-scroll {
-   0% { top: 100%; }
-    100% { top: -100%; }
-  }
+}
+
+@keyframes auto-scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
   h3 {
     color: rgb(255, 205, 248);
     text-align: center;
