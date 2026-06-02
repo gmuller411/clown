@@ -95,6 +95,7 @@ p {
     padding: 20px 0;
     border-style: dotted;
     border-color: rgb(255, 205, 248);
+    background: none;
 }
 
 .marquee-content {
@@ -102,6 +103,7 @@ p {
     gap: 10px; 
     animation: scroll 20s linear infinite;
     width: fit-content;
+    background:none;
 }
 
 @keyframes scroll {
