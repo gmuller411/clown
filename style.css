@@ -88,7 +88,6 @@ p {
     bottom: 20px;
     right: 20px;
 }
-
 .marquee-container {
     width: 100%;
     overflow: hidden;
@@ -112,7 +111,7 @@ p {
 @keyframes marquee {
     0% { margin-left: 0; }
     100% { margin-left: -50%; }
-}
+} 
   h3 {
     color: rgb(255, 205, 248);
     text-align: center;
