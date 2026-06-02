@@ -88,22 +88,18 @@ p {
     bottom: 20px;
     right: 20px;
 }
+
 .marquee-container {
     overflow: hidden;
     width: 100%;
-    background-color: #f0f0f0;
     padding: 20px 0;
-}
-.marquee-container {
-    overflow: hidden;
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 20px 0;
+    border-style: dotted;
+    border-color: rgb(255, 205, 248);
 }
 
 .marquee-content {
     display: flex;
-    gap: 10px; /* Space between images */
+    gap: 10px; 
     animation: scroll 20s linear infinite;
     width: fit-content;
 }
