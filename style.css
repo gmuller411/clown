@@ -94,10 +94,18 @@ p {
     background-color: #f0f0f0;
     padding: 20px 0;
 }
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
 .marquee-content {
-    display: inline-block;
-    white-space: nowrap;
+    display: flex;
+    gap: 10px; /* Space between images */
     animation: scroll 20s linear infinite;
+    width: fit-content;
 }
 
 @keyframes scroll {
@@ -107,7 +115,7 @@ p {
     100% {
         transform: translateX(-100%);
     }
-}
+} 
 .marquee-container:hover .marquee-content {
     animation-play-state: paused;
 }
