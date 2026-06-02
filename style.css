@@ -100,7 +100,7 @@ p {
     display: flex;
     gap: 10px;
     width: max-content;
-    animation: marquee 15s linear infinite;
+    animation: marquee 30s linear infinite;
 }
 
 .marquee-content img {
@@ -114,7 +114,7 @@ p {
         transform: translateX(0); 
     }
     to { 
-        transform: translateX(calc(-50% - 5px)); 
+        transform: translateX(-2894.375px); 
     }
 }
   h3 {
