@@ -90,41 +90,28 @@ p {
 }
 
 .marquee-container {
-    overflow: hidden;
     width: 100%;
-    max-width: 100%;
+    overflow: hidden;
     padding: 20px 0;
     border-style: dotted;
     border-color: rgb(255, 205, 248);
-    background: none;
-    display: block;
 }
 
 .marquee-content {
     display: flex;
     gap: 10px;
-    animation: scroll 10s linear infinite;
-    will-change: transform;
+    width: max-content;
+    animation: marquee 15s linear infinite;
 }
 
-.marquee-img {
-    width: 100px;
+.marquee-content img {
     height: 200px;
-    flex-shrink: 0;
-    object-fit: contain;
+    width: auto;
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(0px);
-    }
-    to {
-        transform: translateX(-1750px);
-    }
-}
-
-.marquee-container:hover .marquee-content {
-    animation-play-state: paused;
+@keyframes marquee {
+    0% { margin-left: 0; }
+    100% { margin-left: -50%; }
 }
   h3 {
     color: rgb(255, 205, 248);
