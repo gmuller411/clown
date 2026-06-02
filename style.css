@@ -105,13 +105,18 @@ p {
 
 .marquee-content img {
     height: 200px;
-    width: auto;
+    width: 100px;
+    object-fit: contain;
 }
 
 @keyframes marquee {
-    0% { margin-left: 0; }
-    100% { margin-left: -50%; }
-} 
+    from { 
+        transform: translateX(0); 
+    }
+    to { 
+        transform: translateX(calc(-50% - 5px)); 
+    }
+}
   h3 {
     color: rgb(255, 205, 248);
     text-align: center;
