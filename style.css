@@ -96,26 +96,34 @@ p {
     border-color: rgb(255, 205, 248);
 }
 
+.marquee-container {
+    width: 100% !important;
+    overflow: hidden !important;
+    padding: 20px 0 !important;
+    border-style: dotted !important;
+    border-color: rgb(255, 205, 248) !important;
+}
+
 .marquee-content {
-    display: flex;
-    gap: 10px;
-    width: max-content;
-    animation: marquee 10s linear infinite;
+    display: flex !important;
+    gap: 10px !important;
+    width: max-content !important;
+    animation: marquee 10s linear infinite !important;
 }
 
 .marquee-content img {
-    height: 130px;
-    width: 130px;
-    object-fit: contain;
-    flex-shrink: 0;
+    height: 50px !important;
+    width: 50px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
 }
 
 @keyframes marquee {
     from { 
-        transform: translateX(0); 
+        transform: translateX(0) !important; 
     }
     to { 
-        transform: translateX(-50%); 
+        transform: translateX(-50%) !important; 
     }
 }
   h3 {
