@@ -100,13 +100,14 @@ p {
     display: flex;
     gap: 10px;
     width: max-content;
-    animation: marquee 8s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
 .marquee-content img {
     height: 80px;
-    width: auto;
+    width: 80px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 @keyframes marquee {
@@ -114,7 +115,7 @@ p {
         transform: translateX(0); 
     }
     to { 
-        transform: translateX(-2894.375px); 
+        transform: translateX(-50%); 
     }
 }
   h3 {
