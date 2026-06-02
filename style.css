@@ -101,7 +101,7 @@ p {
 .marquee-content {
     display: flex;
     gap: 10px;
-    animation: scroll 8s linear infinite;
+    animation: scroll 6s linear infinite;
 }
 
 .marquee-img {
@@ -111,11 +111,14 @@ p {
 }
 
 @keyframes scroll {
-    from {
+    0% {
         transform: translateX(0);
     }
-    to {
-        transform: translateX(calc(-1600px - 70px));
+    50% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
