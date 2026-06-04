@@ -29,7 +29,8 @@
         <iframe src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vT4qZTILHRfPJPjTz1gGCIa0aXLvigiL3LF1tyX66ODSFA5S4OZAxm7Smj2cKwVZLVrQ1uzESevngEr&font=Default&lang=en&initial_zoom=2&width=100%25&height=650" title="TimelineJS embed"></iframe>
       </div>
       <p style="text-align:center;"> This is a timeline I made using <a href="https://timeline.knightlab.com/" target="_blank">TimelineJS</a>! I created it on our first day. Timeline JS is a really neat tool!</p>
-      <h2 style="text-align:center;">Go visit the other fellows' sites!</h2>
+      <h2 align-text=""center">See my Week 2 Mini-Project <a href="mini-project.html">here</a>!</h2>
+      <h1 style="text-align:center;">Go visit the other fellows' sites!</h1>
        
       <div id="grid-container" style= "display: flex; justify-content: center; text-align: center; width:50%; margin: auto; padding: 20px; border-radius: 10px; float: absolute; width:fit-content; height: fit-content">
       <img src="media/dssf/ponyone.png" alt="a vintage my little pony toy" style=" height:200px; width: 200px; float: absolute left; margin-left: 20px;">
@@ -45,44 +46,3 @@
     <img src="https://64.media.tumblr.com/bbb236169b00261437829c561ced5cf7/b269e70333ece861-f9/s500x750/5367c7c5e1ce69aa628b31d73ca56c4b8d3fc9cb.gif" alt="a row of dancing clowns" image-display="block" margin= "auto">
 </footer>
 
-      <script>
-        (function() {
-          const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-          if (!slides.length) return;
-          const prevBtn = document.getElementById('prevBtn');
-          const nextBtn = document.getElementById('nextBtn');
-          let index = slides.findIndex(s => s.classList.contains('active'));
-          if (index === -1) index = 0;
-
-          function show(i) {
-            slides.forEach(s => s.classList.remove('active'));
-            slides[i].classList.add('active');
-          }
-
-          function next() {
-            index = (index + 1) % slides.length;
-            show(index);
-          }
-
-          function prev() {
-            index = (index - 1 + slides.length) % slides.length;
-            show(index);
-          }
-
-          prevBtn && prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
-          nextBtn && nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
-
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') { prev(); resetAutoplay(); }
-            if (e.key === 'ArrowRight') { next(); resetAutoplay(); }
-          });
-
-          // autoplay with reset on manual interaction
-          let autoplayInterval = 5000;
-          let timer = setInterval(next, autoplayInterval);
-          function resetAutoplay() {
-            clearInterval(timer);
-            timer = setInterval(next, autoplayInterval);
-          }
-        })();
-      </script>
