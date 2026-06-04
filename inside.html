@@ -70,7 +70,25 @@
     </div>
     <img src="media/inside/wigglebug.gif" alt="a dancing bug" width="200" height="200" style=" float: absolute left; margin-left: 20px;">
     </div>
-    
+    <script>
+      const marquee = document.getElementById('marquee');
+      let offset = 0;
+      const step = 2;
+      
+      function scroll() {
+        offset -= step;
+        const maxOffset = -(marquee.scrollWidth / 2);
+        
+        if (offset <= maxOffset) {
+          offset = 0;
+        }
+        
+        marquee.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(scroll);
+      }
+      
+      scroll();
+    </script>
 </body>
 <div class="pagedoll">
     <a href="https://toyhou.se/27658154.caverna">
