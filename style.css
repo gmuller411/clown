@@ -88,29 +88,6 @@ p {
     bottom: 20px;
     right: 20px;
 }
-.scroll-container {
-    margin: 20px auto;
-    padding: 15px;
-    height: auto;
-    width: 90%;
-    max-width: 1000px;
-    overflow: hidden;
-    position: relative;
-    border-style: dotted;
-    border-color: rgb(255, 205, 248);
-    border-radius: 10px;
-  }
-  .scroll-content {
-    display: flex;
-    gap: 30px;
-    white-space: nowrap;
-    align-items: center;
-  }
-  .scroll-content img {
-    flex-shrink: 0;
-    height: auto;
-    max-height: 220px;
-  }
   h3 {
     color: rgb(255, 205, 248);
     text-align: center;
