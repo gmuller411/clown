@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1 style="text-align: center; border: 2px solid rgb(255, 205, 248); border-style: dotted; position: static center"><img src="media/inside/frog.gif" alt="a frog face" style="width: 30px; height: 30px;">Digital Scholarship Summer Fellows Program!<img src="media/inside/frog.gif" alt="a frog face" style="width: 30px; height: 30px;"></h1> 
-        <img src="https://64.media.tumblr.com/749462ddd287f4ca2f726da2070a5bc4/07637d3b1fa89e26-ec/s640x960/01d8c5099ba402ffc1080bfb26447cbd8e9d1471.pnj" style="display: block; margin: auto;" alt="a divider of colorful bunting">
+        <img src="https://64.media.tumblr.com/749462ddd287f4ca2f726da2070a5bc4/07637d3b1fa89e26-ec/s640x960/01d8c5099ba402ffc1080bfb26447cbd8e9d1471.png" style="display: block; margin: auto;" alt="a divider of colorful bunting">
 <div id="grid-container" style="display: flex; justify-content: center">
              <img src="https://64.media.tumblr.com/c06bd63629e19e3ac8eec79de29711f0/7633aedf57f42700-ef/s75x75_c1/939f0095329b4ec0c9a53501b9f4491d8be93a87.gif" alt="a dancing clown" width="100" height="100">
             <ul id="navbar" style=" display:block; text-align: center; list-style-type: none; font-size: 20px; position: static center; width: fit-content; padding: 20px; border-style: dotted; border-color: rgb(255, 205, 248); border-radius: 10px">
@@ -24,6 +24,11 @@
             <p style="text-align:center;"> This website was made as a part of my time inthe <strong>Digital Scholarship Summer Fellows Program</strong> at Bryn Mawr College. DSSF is a "paid summer internship opportunity for Bryn Mawr undergraduate students to learn digital research and publication skills and gain professional experience by collaborating on public-facing digital scholarship projects. Fellows explore key issues and methods in digital scholarship, critical making, and multi-modal research through a combination of hands-on work, instruction, and discussion." The project for the summer of 2026 is Paul Thomas Annotated: In the Margins, the link to which can be found on my projects page! Read more about the program at <a href="https://digitalscholarship.blogs.brynmawr.edu/digital-scholarship-summer-fellows-program/">the DSSF website!</a></p>
             <img src="media/dssf/whitecat.gif" alt="a white cat with a halo and wings" style=" height:200px; width: 200px; float: absolute left; margin-left: 20px;">
       </div>
+      <h1> What I'm Working On!</h1>
+      <div class="iframe-wrapper">
+        <iframe src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vT4qZTILHRfPJPjTz1gGCIa0aXLvigiL3LF1tyX66ODSFA5S4OZAxm7Smj2cKwVZLVrQ1uzESevngEr&font=Default&lang=en&initial_zoom=2&width=100%25&height=650" title="TimelineJS embed"></iframe>
+      </div>
+      <p style="text-align:center;"> This is a timeline I made using <a href="https://timeline.knightlab.com/" target="_blank">TimelineJS</a>! I created it on our first day. Timeline JS is a really neat tool!</p>
       <h2 style="text-align:center;">Go visit the other fellows' sites!</h2>
        
       <div id="grid-container" style= "display: flex; justify-content: center; text-align: center; width:50%; margin: auto; padding: 20px; border-radius: 10px; float: absolute; width:fit-content; height: fit-content">
@@ -39,3 +44,45 @@
 <footer>
     <img src="https://64.media.tumblr.com/bbb236169b00261437829c561ced5cf7/b269e70333ece861-f9/s500x750/5367c7c5e1ce69aa628b31d73ca56c4b8d3fc9cb.gif" alt="a row of dancing clowns" image-display="block" margin= "auto">
 </footer>
+
+      <script>
+        (function() {
+          const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+          if (!slides.length) return;
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
+          let index = slides.findIndex(s => s.classList.contains('active'));
+          if (index === -1) index = 0;
+
+          function show(i) {
+            slides.forEach(s => s.classList.remove('active'));
+            slides[i].classList.add('active');
+          }
+
+          function next() {
+            index = (index + 1) % slides.length;
+            show(index);
+          }
+
+          function prev() {
+            index = (index - 1 + slides.length) % slides.length;
+            show(index);
+          }
+
+          prevBtn && prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
+          nextBtn && nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
+
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') { prev(); resetAutoplay(); }
+            if (e.key === 'ArrowRight') { next(); resetAutoplay(); }
+          });
+
+          // autoplay with reset on manual interaction
+          let autoplayInterval = 5000;
+          let timer = setInterval(next, autoplayInterval);
+          function resetAutoplay() {
+            clearInterval(timer);
+            timer = setInterval(next, autoplayInterval);
+          }
+        })();
+      </script>
