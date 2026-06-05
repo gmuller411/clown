@@ -19,10 +19,16 @@
              border: 2px solid rgb(240, 234, 246);
              border-style: double;
              padding: 10px;
+             text-align: center;
          }
          p {
              color: rgb(240, 234, 246);
              font-size: 20px;
+             border-style: double;
+              padding: 10px; 
+              width: fit-content; 
+              color: rgb(240, 234, 246); 
+              text-align: center;
          }
          h2 {
              color: rgb(240, 234, 246);
@@ -46,6 +52,9 @@
              width: 50%;
              max-width: 100%;
              border: 2px solid rgba(240, 234, 246, 0.5);
+         }
+         .figure-annotated.montage img {
+             width: 75%;
          }
          .figure-annotated figcaption {
              text-align: center;
@@ -108,6 +117,8 @@
     <a href="fourthlink.html" target="_blank" style=" display: block; margin: 0 auto 20px; width: 100px; padding: 10px; text-align: center; border: 2px solid rgb(240, 234, 246); border-style: double;">Go Back</a>
     <img src="https://64.media.tumblr.com/2edbb4250d9eb28d82607e24302b8337/53460eb827122b25-c1/s640x960/34d5b2cdada14b300f0ee6484490b29a82fa8eb9.pnj" alt="angle divider" style="display: block; margin: 40px auto; width: 50%; max-width: 100%;">
     <p style="text-align: center; border: 2px solid rgb(240, 234, 246); border-style: double; padding: 10px;">For my mini-project this week, I was really inspired from what I had seen in Dave Rodrigez's project, <a href="https://drodz11.github.io/colors-of-ozu/" target="_blank">Colors of Ozu</a>. It utilizes the "Z-projection" and "stack" features of <a href="https://imagej.net" target="_blank">ImageJ</a>, an image processing software, to basically average together the images in the stack. Rodrigez used this method to analyze the color filmography of director Yasujirō Ozu, and I was interested to see if the same tools and analysis could be applied to the filmography of Paul Thomas Anderson. For this small project specifically, I decided to create summed z-projections utilizing the screenshots already gathered for the Paul Thomas Annotated project, using a program called Fiji (which is really just another name for ImageJ).</p>
+
+    <h1>Average Intensity</h1>
 
     <figure class="figure-annotated" id="figure-hard">
         <div class="pin-marker" style="top: 74%; left: 30%;" data-popup="popup-hard1"></div>
@@ -349,15 +360,93 @@
     </p>
     <img src="media/fourthlink/pta-mats/MAGN-sum.png" alt="Sum Slices Z-Projection of Magnolia" style="display: block; margin: 0 auto; width: 50%; max-width: 100%; border: 2px solid rgba(240, 234, 246, 0.5);">
     <p style="border-style: double; padding: 10px; width: fit-content; color: rgb(240, 234, 246); text-align: center;">
-    As you can see, we have a completely different result here! Colors of Ozu uses the sum slices setting (which I only realized after I had already made all of the projections above). I think this tells a very different story than the other image; I'd like to watch more of the films in order to produce a better analysis.
-    Aside from that, moving forward, I would like to continue playing around with Fiji and what results I can get from the program (which actually appears to be program designed for medical use!), along with looking into the scholarship surrounding Digital Surrealism that Colors of Ozu touches on. That project also employs the use of graphics that display median hue and median saturation, which I'd be interested in figuring out as well!
-    Dave Rodriguez's contact information is listed on the Colors of Ozu website, so I'm considering reaching out to him for advice on how to move forward as well. </p>
+    As you can see, we have a completely different result here! Colors of Ozu uses the sum slices setting (which I only realized after I had already made all of the projections above). However, I still feel as though I'm getting images that are even more similar to each other with the sum-slice command. Take the <i> Licorice Pizza</i> sum-slice z-projection, for example: </p>
+    <img style="display: block; margin: 0 auto; width: 50%; max-width: 100%; border: 2px solid rgba(240, 234, 246, 0.5);" src="media/fourthlink/pta-mats/LICO-sum.png" alt="Sum Slices Z-Projection of Licorice Pizza">
+    <p>
+    The sum-slice z-projections of these two films are even more similar than their average-intesity z-projections, which are already so similar. However, there is another awesome feature of Fiji that allows us to look at the unique color palettes of each film...
+    </p>
+    <h1>Montages</h1>
+    <p>Montages are a feature in Fiji that allow the use to see every image in a stack (in this case, every screenshot taken for a film) side-by-side in sequence. This allows us to get a better view of the colors used in the film overall, and how those colors are temporally spaced throughout its runtime.</p>
+    
+    <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/HARD-montage.png" alt="Hard Eight montage">
+        <figcaption>
+            <h2>Hard Eight</h2>
+        </figcaption>
+    </figure>
+
+     <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/BOOG-montage.png" alt="Boogie Nights montage">
+        <figcaption>
+            <h2>Boogie Nights</h2>
+        </figcaption>
+    </figure>
+
+    <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/MAGN-montage.png" alt="Magnolia montage">
+        <figcaption>
+            <h2>Magnolia</h2>
+        </figcaption>
+    </figure>
+
+     <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/PUNC-montage.png" alt="Punch-Drunk Love montage">
+        <figcaption>
+            <h2>Punch-Drunk Love</h2>
+        </figcaption>
+    </figure>
+
+    <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/MAST-montage.png" alt="The Master montage">
+        <figcaption>
+            <h2>The Master</h2>
+        </figcaption>
+    </figure>
+
+    <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/TWBB-montage.png" alt="There Will Be Blood montage">
+        <figcaption>
+            <h2>There Will Be Blood</h2>
+        </figcaption>
+    </figure>
+
+    <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/INHE-montage.png" alt="Inherent Vice montage">
+        <figcaption>
+            <h2>Inherit Vice</h2>
+        </figcaption>
+    </figure>
+
+     <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/PHAN-montage.png" alt="Phantom Thread montage">
+        <figcaption>
+            <h2>Phantom Thread</h2>
+        </figcaption>
+    </figure>
+
+    <figure class="figure-annotated montage">
+        <img src="media/fourthlink/pta-mats/LICO-montage.png" alt="Licorice Pizza montage">
+        <figcaption>
+            <h2>Licorice Pizza</h2>
+        </figcaption>
+    </figure>
+
 </body>
 <img src="https://64.media.tumblr.com/2edbb4250d9eb28d82607e24302b8337/53460eb827122b25-c1/s640x960/34d5b2cdada14b300f0ee6484490b29a82fa8eb9.pnj" alt="angle divider" style="display: block; margin: 40px auto; width: 50%; max-width: 100%;">
-<footer style="border-style: double; padding: 10px; width: fit-content; color: rgb(240, 234, 246); text-align: center;">
-    <p style="text-align: center;">The hexidecimal codes and images for the colors of these z-projections were obtained using <a href="https://www.figma.com/color-picker/">Figma</a>.</p>
-    <p style="text-align: center;">I know One Battle After Another is nearing completion as far as screenshots are concerned, so I hope to be able to look into it soon!</p>
+<h1> Moving Forward</h1>
+<p style="border-style: double; padding: 10px; width: fit-content; color: rgb(240, 234, 246); text-align: center;">
+    First and foremost, I'd like to watch more of Paul Thomas Anderson's films in order to produce a better visual analysis of these images. But beyond that, moving forward, I would like to continue playing around with Fiji and what results I can get from the program (which actually appears to be program designed for medical use!), along with looking into the scholarship surrounding Digital Surrealism that Colors of Ozu touches on. That project also employs the use of graphics that display median hue and median saturation, which I'd be interested in figuring out as well! Dave Rodriguez's contact information is listed on the Colors of Ozu website, so I'm considering reaching out to him for advice on how to move forward as well.
+</p>
+<img src="https://64.media.tumblr.com/2edbb4250d9eb28d82607e24302b8337/53460eb827122b25-c1/s640x960/34d5b2cdada14b300f0ee6484490b29a82fa8eb9.pnj" alt="angle divider" style="display: block; margin: 40px auto; width: 50%; max-width: 100%;">
+<footer style="border-style: double; padding: 10px; width: fit-content; color: rgb(240, 234, 246); text-align: center; align-items:center">
+    <p style="text-align: center; border: none; margin: 0 auto">
+        I know One Battle After Another is nearing completion as far as screenshots are concerned, so I hope to be able to look into it soon!
+   </p>
+    <p style="text-align: center; border: none; margin: 0 auto;">
+    The hexidecimal codes and images for the colors of these z-projections were obtained using <a href="https://www.figma.com/color-picker/">Figma</a>.
+    </p>
     <a href="#top" target="_blank" style=" display: block; margin: 0 auto 20px; width: 100px; padding: 10px; text-align: center; border: 2px solid rgb(240, 234, 246); border-style: double;">Back To Top</a>
 </footer>
+<img src="https://64.media.tumblr.com/2edbb4250d9eb28d82607e24302b8337/53460eb827122b25-c1/s640x960/34d5b2cdada14b300f0ee6484490b29a82fa8eb9.pnj" alt="angle divider" style="display: block; margin: 40px auto; width: 50%; max-width: 100%;">
 </html>
 
