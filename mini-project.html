@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,15 +6,19 @@
     <title>Mini-Project</title>
    <style>
        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
          body {
               background-image: url(media/fourthlink/pta-mats/gryd025-2.jpg);
               background-repeat: repeat;
               font-family: 'Montserrat', sans-serif;
+              margin: 0;
+              padding: 0 16px 40px;
          }
          h1 {
              color: rgb(240, 234, 246);
              border: 2px solid rgb(240, 234, 246);
-                border-style: double;
+             border-style: double;
+             padding: 10px;
          }
          p {
              color: rgb(240, 234, 246);
@@ -29,69 +33,221 @@
          a {
              color: rgb(240, 234, 246);
          }
-
-       
+         .figure-annotated {
+             position: relative;
+             display: block;
+             margin: 0 auto 30px;
+             width: fit-content;
+             padding: 30px;
+         }
+         .figure-annotated img {
+             display: block;
+             margin: 0 auto;
+             width: 50%;
+             max-width: 100%;
+             border: 2px solid rgba(240, 234, 246, 0.5);
+         }
+         .figure-annotated figcaption {
+             text-align: center;
+             color: rgb(240, 234, 246);
+             margin-top: 10px;
+         }
+         .pin-marker {
+             position: absolute;
+             width: 32px;
+             height: 32px;
+             cursor: pointer;
+             transform: translate(-50%, -100%);
+             background: url("media/fourthlink/pta-mats/pin.png") no-repeat center / contain;
+             z-index: 5;
+         }
+         .popup-card {
+             position: absolute;
+             min-width: 240px;
+             max-width: 320px;
+             background: rgba(19, 18, 22, 0.96);
+             color: rgb(240, 234, 246);
+             border: 1px solid rgba(240, 234, 246, 0.35);
+             border-radius: 12px;
+             padding: 14px;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+             display: none;
+             z-index: 10;
+         }
+         .popup-card.active {
+             display: block;
+         }
+         .popup-card img {
+             display: block;
+             max-width: 100%;
+             margin-top: 10px;
+             border-radius: 8px;
+         }
+         .popup-card .popup-close {
+             position: absolute;
+             top: 8px;
+             right: 10px;
+             background: transparent;
+             border: none;
+             color: rgb(240, 234, 246);
+             font-size: 18px;
+             cursor: pointer;
+         }
+         .popup-card h4 {
+             margin: 0 0 8px;
+             font-size: 18px;
+         }
+         .popup-card p {
+             margin: 0;
+             line-height: 1.5;
+         }
   </style>
 </head>
 <body>
     <h1 style="text-align: center;"> Mini-Project </h1>
-    <a href="fourthlink.html" target="_blank" style=" display: block; margin: 0 auto; width: 100px; padding: 10px; text-align: center; border: 2px solid rgb(240, 234, 246); border-style: double;">Go Back</a>
+    <a href="fourthlink.html" target="_blank" style=" display: block; margin: 0 auto 20px; width: 100px; padding: 10px; text-align: center; border: 2px solid rgb(240, 234, 246); border-style: double;">Go Back</a>
     <p style="text-align: center; border: 2px solid rgb(240, 234, 246); border-style: double; padding: 10px;">For my mini-project this week, I was really inspired from what I had seen in Dave Rodrigez's project, <a href="https://drodz11.github.io/colors-of-ozu/" target="_blank">Colors of Ozu</a>. It utilizes the "Z-projection" and "stack" features of <a href="https://imagej.net" target="_blank">ImageJ</a>, an image processing software, to basically average together the images in the stack. Rodrigez used this method to analyze the color filmography of director Yasujirō Ozu, and I was interested to see if the same tools and analysis could be applied to the filmography of Paul Thomas Anderson. For this small project specifically, I decided to create summed z-projections utilizing the screenshots already gathered for the Paul Thomas Annotated project, using a program called Fiji (which is really just another name for ImageJ).</p>
+
+    <figure class="figure-annotated" id="figure-twwb">
+        <div class="pin-marker" style="top: 45%; left: 55%;" data-popup="popup-twwb1"></div>
+        <div class="pin-marker" style="top: 75%; left: 30%;" data-popup="popup-twwb2"></div>
+        <div class="pin-marker" style="top: 20%; left: 45%;" data-popup="popup-twwb3"></div>
+        <img src="media/fourthlink/pta-mats/TWWB-copy.png" alt="Summed-Z Projection of There Will Be Blood">
+        <figcaption>There Will Be Blood (2007)</figcaption>
+        <div class="popup-card" id="popup-twwb1" style="top: 55%; left: 45%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>#4F4440</h4>
+            <img src="media/colors/twbb1.png" alt="There Will Be Blood detail">
+        </div>
+        <div class="popup-card" id="popup-twwb2" style="top: 75%; left: 30%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>#3F3A37</h4>
+            <img src="media/colors/twbb2.png" alt="There Will Be Blood detail">
+        </div>
+        <div class="popup-card" id="popup-twwb3" style="top: 20%; left: 45%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>#5B595C</h4>
+            <img src="media/colors/twbb3.png" alt="There Will Be Blood detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-punc">
+        <div class="pin-marker" style="top: 18%; left: 68%;" data-popup="popup-punc1"></div>
+        <img src="media/fourthlink/pta-mats/PUNC-copy.png" alt="Summed-Z Projection of Punch-Drunk Love">
+        <figcaption>Punch-Drunk Love (2002)</figcaption>
+        <div class="popup-card" id="popup-punc1" style="top: 55%; left: 53%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>#464252</h4>
+            <img src="media/colors/punc1.png" alt="Punch-Drunk Love detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-phan">
+        <div class="pin-marker" style="top: 22%; left: 72%;" data-popup="popup-phan"></div>
+        <img src="media/fourthlink/pta-mats/PHAN.png" alt="Summed-Z Projection of Phantom Thread">
+        <figcaption>Phantom Thread (2017)</figcaption>
+        <div class="popup-card" id="popup-phan" style="top: 42%; left: 58%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>#5A585B</h4>
+            <img src="media/fourthlink/pta-mats/PHAN.png" alt="Phantom Thread detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-boog">
+        <div class="pin-marker" style="top: 20%; left: 70%;" data-popup="popup-boog"></div>
+        <img src="media/fourthlink/pta-mats/BOOG.png" alt="Summed-Z Projection of Boogie Nights">
+        <figcaption>Boogie Nights (1997)</figcaption>
+        <div class="popup-card" id="popup-boog" style="top: 40%; left: 64%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>Boogie Nights</h4>
+            <p>One click reveals more information and an embedded image for each figure.</p>
+            <img src="media/fourthlink/pta-mats/BOOG.png" alt="Boogie Nights detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-lico">
+        <div class="pin-marker" style="top: 20%; left: 68%;" data-popup="popup-lico"></div>
+        <img src="media/fourthlink/pta-mats/LICO.png" alt="Summed-Z Projection of Licorice Pizza">
+        <figcaption>Licorice Pizza (2021)</figcaption>
+        <div class="popup-card" id="popup-lico" style="top: 40%; left: 62%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>Licorice Pizza</h4>
+            <p>Pin popups support rich content like this text plus images.</p>
+            <img src="media/fourthlink/pta-mats/LICO.png" alt="Licorice Pizza detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-inhe">
+        <div class="pin-marker" style="top: 18%; left: 74%;" data-popup="popup-inhe"></div>
+        <img src="media/fourthlink/pta-mats/INHE.png" alt="Summed-Z Projection of Inherent Vice">
+        <figcaption>Inherent Vice (2014)</figcaption>
+        <div class="popup-card" id="popup-inhe" style="top: 42%; left: 60%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>Inherent Vice</h4>
+            <p>Each popup is placed inside the figure container so it stays aligned.</p>
+            <img src="media/fourthlink/pta-mats/INHE.png" alt="Inherent Vice detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-mast">
+        <div class="pin-marker" style="top: 18%; left: 72%;" data-popup="popup-mast"></div>
+        <img src="media/fourthlink/pta-mats/MAST.png" alt="Summed-Z Projection of The Master">
+        <figcaption>The Master (2012)</figcaption>
+        <div class="popup-card" id="popup-mast" style="top: 42%; left: 58%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>The Master</h4>
+            <p>These popups are easy to edit: change heading, text, or add images.</p>
+            <img src="media/fourthlink/pta-mats/MAST.png" alt="The Master detail">
+        </div>
+    </figure>
+
+    <figure class="figure-annotated" id="figure-hard">
+        <div class="pin-marker" style="top: 18%; left: 74%;" data-popup="popup-hard"></div>
+        <img src="media/fourthlink/pta-mats/HARD.png" alt="Summed-Z Projection of Hard Eight">
+        <figcaption>Hard Eight (1996)</figcaption>
+        <div class="popup-card" id="popup-hard" style="top: 42%; left: 58%;">
+            <button class="popup-close" aria-label="Close popup">×</button>
+            <h4>Hard Eight</h4>
+            <p>Small point popups now appear on each figure. Click outside to close them.</p>
+            <img src="media/fourthlink/pta-mats/HARD.png" alt="Hard Eight detail">
+        </div>
+    </figure>
+
+    <script>
+        const pinMarkers = document.querySelectorAll('.pin-marker');
+        const popups = document.querySelectorAll('.popup-card');
+
+        function closeAllPopups() {
+            popups.forEach(popup => popup.classList.remove('active'));
+        }
+
+        pinMarkers.forEach(pin => {
+            const popupId = pin.dataset.popup;
+            const popup = document.getElementById(popupId);
+            if (!popup) return;
+
+            pin.addEventListener('mouseenter', () => {
+                closeAllPopups();
+                popup.classList.add('active');
+            });
+
+            popup.addEventListener('mouseenter', () => {
+                popup.classList.add('active');
+            });
+
+            popup.addEventListener('mouseleave', () => {
+                popup.classList.remove('active');
+            });
+        });
+
+        document.querySelectorAll('.popup-close').forEach(button => {
+            button.addEventListener('click', event => {
+                event.stopPropagation();
+                const popup = button.closest('.popup-card');
+                if (popup) popup.classList.remove('active');
+            });
+        });
+    </script>
 </body>
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/TWWB-copy.png" alt="Summed-Z Projection of There Will Be Blood" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        There Will Be Blood (2007)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content;">
-    <img src="media/fourthlink/pta-mats/PUNC-copy.png" alt="Summed-Z Projection of Punch-Drunk Love" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        Punch-Drunk Love (2002)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/PHAN.png" alt="Summed-Z Projection of Phantom Thread" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        Phantom Thread (2017)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/BOOG.png" alt="Summed-Z Projection of Boogie Nights" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        Boogie Nights (1997)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/LICO.png" alt="Summed-Z Projection of Licorice Pizza" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        Licorice Pizza (2021)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/INHE.png" alt="Summed-Z Projection of Inherent Vice" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        Inherent Vice (2014)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/MAST.png" alt="Summed-Z Projection of The Master" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        The Master (2012)
-    </figcaption>
-</figure>
-
-<figure style="display: block; margin: 0 auto; width: fit-content; padding: 30px;">
-    <img src="media/fourthlink/pta-mats/HARD.png" alt="Summed-Z Projection of Hard Eight" style="display: block; margin: 0 auto; width: 50%;">
-    <figcaption style="text-align:center; color:rgb(240, 234, 246)">
-        Hard Eight (1996)
-    </figcaption>
-</figure>
-
 </html>
+
